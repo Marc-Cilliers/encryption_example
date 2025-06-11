@@ -1,0 +1,30 @@
+name: Encryption-Decryption Status
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Generate RSA key pair
+        run: |
+          openssl genpkey -algorithm RSA -out privateKey.pem -pkeyopt rsa_keygen_bits:2048
+          openssl rsa -pubout -in privateKey.pem -out publicKey.pem
+
+      - name: Run encryption-decryption test
+        run: yarn test
