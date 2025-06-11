@@ -1,5 +1,5 @@
 # Encryption Example
-
+[![Encryption-Decryption Status](https://github.com/Marc-Cilliers/encryption_example/actions/workflows/encryption.yml/badge.svg)](https://github.com/Marc-Cilliers/encryption_example/actions/workflows/encryption.yml)
 
 
 ## 1. Setup
