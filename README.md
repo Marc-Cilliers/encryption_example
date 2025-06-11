@@ -20,14 +20,14 @@ openssl rsa -pubout -in privateKey.pem -out publicKey.pem
 
 ## 2. Encrypt
 ```bash
-yarn run encrypt
+yarn encrypt
 ```
 
 This will encrypt whatever is in `payload.json` and write the result to `encrypted.json`
 
 ## 2. Decrypt
 ```bash
-yarn run decrypt
+yarn decrypt
 ```
 
 This will decrypt whatever is in `encrypted.json` and write the result to `decrypted.json`
