@@ -1,1 +1,34 @@
-# encryption_example
+# Encryption Example
+
+
+
+## 1. Setup
+
+### Install Dependencies
+```bash
+yarn install
+```
+
+### Create keys
+```bash
+openssl genpkey -algorithm RSA -out privateKey.pem -pkeyopt rsa_keygen_bits:2048
+```
+
+```bash
+openssl rsa -pubout -in privateKey.pem -out publicKey.pem
+```
+
+## 2. Encrypt
+```bash
+yarn run encrypt
+```
+
+This will encrypt whatever is in `payload.json` and write the result to `encrypted.json`
+
+## 2. Decrypt
+```bash
+yarn run decrypt
+```
+
+This will decrypt whatever is in `encrypted.json` and write the result to `decrypted.json`
+

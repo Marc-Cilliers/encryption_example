@@ -1,0 +1,16 @@
+{
+  "Uuid": "2e652e5b-3734-4539-a897-113918ab9424",
+  "TimeStamp": "2025-06-11T16:02:58.025Z",
+  "JobRef": null,
+  "Description": "some description goes here",
+  "PostCode": "ABC 123",
+  "ReturnUrl": "https://example.com/return",
+  "WebhookUri": "https://example.com/webhook",
+  "Amount": 1000,
+  "Codes": [
+    "HMC"
+  ],
+  "Actions": [
+    "customer_cancelled"
+  ]
+}
